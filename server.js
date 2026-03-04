@@ -43,6 +43,18 @@ app.get('/', async function (request, response) {
    response.render('index.liquid')
 })
 
+app.get('/nieuw-west', async function (req, res) {
+  res.render('nieuw-west.liquid')
+})
+
+app.get('/zuidoost', async function (req, res) {
+  res.render('zuidoost.liquid')
+})
+
+app.get('/oost', async function (req, res) {
+  res.render('oost.liquid')
+})
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {
