@@ -1,0 +1,15 @@
+    {% render 'partials/head.liquid'%}
+
+    <main class="main-nieuw-west">
+
+        <section class="section-cards">
+            <div class="cards">
+                {% for story in stories %}
+                    {% render 'partials/card.liquid', story: story, categories: categories %}
+                {% endfor %}
+            </div>
+        </section>
+
+    </main>
+    
+    {% render 'partials/foot.liquid'%}
