@@ -1,0 +1,19 @@
+<div class="card">
+
+  <img src="https://fdnd-agency.directus.app/assets/{{ story.cover }}" alt="{{ story.title }}">
+
+  <h2>{{ story.title }}</h2>
+
+  <p>{{ story.district }}</p>
+
+  {% for category in categories %}
+    {% if category.id == story.categories[0] %}
+      <p>{{ category.title }}</p>
+    {% endif %}
+  {% endfor %}
+
+  <a href="/article/{{ story.id }}" class="card-button">
+    Bekijk het nieuwsbericht
+  </a>
+
+</div>
