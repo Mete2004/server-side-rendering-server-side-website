@@ -18,6 +18,22 @@ console.log('Hieronder moet je waarschijnlijk nog wat veranderen')
 // console.log(apiResponseJSON)
 
 
+async function getStories() {
+  const res = await fetch("https://fdnd-agency.directus.app/items/buurtcampuskrant_stories");
+  const data = await res.json();
+  return data.data;
+}
+
+//Haalt alle stories op.
+
+async function getCategories() {
+  const res = await fetch("https://fdnd-agency.directus.app/items/buurtcampuskrant_categories");
+  const data = await res.json();
+  return data.data;
+}
+
+//Haalt alle doelgroepen op.
+
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
 
@@ -44,7 +60,19 @@ app.get('/', async function (request, response) {
 })
 
 app.get('/nieuw-west', async function (req, res) {
-  res.render('nieuw-west.liquid')
+
+  const stories = await getStories();
+  const categories = await getCategories();
+
+  const filteredStories = stories.filter(function(story) {
+    return story.district === "nieuw-west";
+  });
+
+  res.render('nieuw-west.liquid', { 
+    stories: filteredStories,
+    categories: categories 
+  });
+
 })
 
 app.get('/zuidoost', async function (req, res) {
@@ -53,6 +81,26 @@ app.get('/zuidoost', async function (req, res) {
 
 app.get('/oost', async function (req, res) {
   res.render('oost.liquid')
+})
+
+app.get('/article/:id', async function (req, res) {
+
+  const stories = await getStories();
+  const categories = await getCategories();
+
+  const story = stories.find(function(story) {
+    return story.id == req.params.id;
+  });
+
+  res.render('article.liquid', { 
+    story: story,
+    categories: categories
+  });
+
+});
+
+app.get('/archief', async function (req, res) {
+  res.render('archief.liquid')
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
