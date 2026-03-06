@@ -83,7 +83,7 @@ app.get('/oost', async function (req, res) {
   res.render('oost.liquid')
 })
 
-app.get('/article/:id', async function (req, res) {
+app.get('/details/:id', async function (req, res) {
 
   const stories = await getStories();
   const categories = await getCategories();
@@ -92,7 +92,7 @@ app.get('/article/:id', async function (req, res) {
     return story.id == req.params.id;
   });
 
-  res.render('article.liquid', { 
+  res.render('details.liquid', { 
     story: story,
     categories: categories
   });
@@ -101,6 +101,10 @@ app.get('/article/:id', async function (req, res) {
 
 app.get('/archief', async function (req, res) {
   res.render('archief.liquid')
+})
+
+app.get('/algemeen', async function (req, res) {
+  res.render('algemeen.liquid')
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
