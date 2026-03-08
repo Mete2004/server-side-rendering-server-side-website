@@ -9,7 +9,12 @@
 </head>
 <body> 
     <header>
-        <a href="#" class="logo"></a>
+
+        {% render "partials/logo.liquid", 
+            mobile_logo: mobile_logo, 
+            desktop_logo: desktop_logo 
+        %}
+        
         <nav class="navigation">
             <a href="nieuw-west" class="link-button">Nieuw-west</a>
             <a href="zuidoost" class="link-button">Zuidoost</a>

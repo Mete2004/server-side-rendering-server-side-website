@@ -12,6 +12,11 @@ header{
     padding: 2rem;
 }
 
+.logo img{
+  width: 10rem;
+  height: auto;
+}
+
 .navigation{
     display: flex;
     flex-direction: row;
