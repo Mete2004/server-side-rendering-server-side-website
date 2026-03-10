@@ -1,4 +1,10 @@
-  {% render 'partials/head.liquid'%}
+    {% assign mobile_logo = "/assets/logo-compact-home.svg" %}
+    {% assign desktop_logo = "/assets/logo-lang-home.svg" %}
+    
+    {% render 'partials/head.liquid',
+        mobile_logo: mobile_logo,
+        desktop_logo: desktop_logo
+    %}
 
     <article class="article">
 
