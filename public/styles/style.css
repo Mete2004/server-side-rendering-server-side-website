@@ -3,13 +3,34 @@
     padding: 0;
 }
 
+h1{
+  color: white;
+}
+
+h2{
+  color: white;
+}
+
+p{
+  color: white;
+}
+
+body{
+  background: black;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 /* header */
 
 header{
     display: flex;
     justify-content: space-between;
-    background: lightskyblue;
-    padding: 2rem;
+    background: rgb(147, 159, 167);
+    padding: 1rem;
+    position: relative;
+    border-radius: 1rem;
 }
 
 .logo img{
@@ -17,7 +38,54 @@ header{
   height: auto;
 }
 
+/* MENU */
+
+.menu-button-outer{
+  place-content: center;
+}
+
+.menu-button{
+  width: 6rem;
+  height: 2rem;
+  background: #f6601a;
+  text-align: center;
+  place-content: center;
+  border-radius: 0.8rem;
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgb(99, 108, 113);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  border-radius: 0.8rem;
+}
+
+.mobile-nav a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-weight: var(---font-weight-bold);
+  text-align: center;
+}
+
+/* OPEN STATE */
+.mobile-nav.open {
+  display: flex;
+  max-height: 500px;
+}
+
 .navigation{
+  display: none;
+  @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -31,8 +99,38 @@ header{
         place-content: center;
         border-radius: 1rem;
     }
+  }
 }
 
+
+/* index.liquid */
+
+.algemeen-nieuwsbrief{
+  background: rgb(147, 159, 167);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.algemeen-nieuwsbrief-inner{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label{
+      background: white;
+      width: 7rem;
+      height: 2rem;
+      text-align: center;
+      place-content: center;
+      border-radius: 1rem;
+}
+
+.article-text{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
 /* cards.liquid */
 
@@ -91,4 +189,25 @@ header{
 
 .section-cards {
   margin-top: 1rem;
+}
+
+/* footer */
+
+.navigation-footer{
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    a{
+        text-decoration: none;
+        height: 2rem;
+        width: 7rem;
+        background: black;
+        color: white;
+        text-align: center;
+        place-content: center;
+        border-radius: 1rem;
+    }
+  }
 }
