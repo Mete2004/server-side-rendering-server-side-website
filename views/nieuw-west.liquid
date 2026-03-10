@@ -1,7 +1,10 @@
-    {% assign mobile_logo = "/assets/logo-compact-.svg" %}
-    {% assign desktop_logo = "/assets/logo-lang-.svg" %}
+    {% assign mobile_logo = "/assets/logo-compact-nieuw-west.svg" %}
+    {% assign desktop_logo = "/assets/logo-lang-nieuw-west.svg" %}
 
-   {% render 'partials/head.liquid'%}
+    {% render 'partials/head.liquid',
+        mobile_logo: mobile_logo,
+        desktop_logo: desktop_logo
+    %}
 
     <main class="main-nieuw-west">
 
