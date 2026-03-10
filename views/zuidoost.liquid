@@ -1,4 +1,10 @@
-    {% render 'partials/head.liquid'%}
+    {% assign mobile_logo = "/assets/logo-compact-zuidoost.svg" %}
+    {% assign desktop_logo = "/assets/logo-lang-zuidoost.svg" %}
+
+    {% render 'partials/head.liquid',
+        mobile_logo: mobile_logo,
+        desktop_logo: desktop_logo
+    %}
 
 
     {% render 'partials/foot.liquid'%}

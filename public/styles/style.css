@@ -51,6 +51,9 @@ header{
   text-align: center;
   place-content: center;
   border-radius: 0.8rem;
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .mobile-nav {
@@ -189,6 +192,15 @@ header{
 
 .section-cards {
   margin-top: 1rem;
+}
+
+
+/* 404 page */
+
+.error-page{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* footer */

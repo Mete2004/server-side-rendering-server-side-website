@@ -1,3 +1,15 @@
-<h1>404</h1>
-<p>Pagina niet gevonden</p>
-<a href="/">Terug naar home</a>
+{% assign mobile_logo = "/assets/logo-compact-home.svg" %}
+{% assign desktop_logo = "/assets/logo-lang-home.svg" %}
+
+{% render 'partials/head.liquid',
+    mobile_logo: mobile_logo,
+    desktop_logo: desktop_logo
+%}
+
+<main class="error-page">
+    <h1>Pagina niet gevonden</h1>
+    <p>De pagina die je zoekt bestaat niet.</p>
+    <a href="/" class="link-button">Terug naar home</a>
+</main>
+
+{% render 'partials/foot.liquid' %}
