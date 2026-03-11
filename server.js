@@ -53,11 +53,21 @@ app.engine('liquid', engine.express());
 app.set('views', './views')
 
 // Maak een GET route voor de index (meestal doe je dit in de root, als /)
-app.get('/', async function (request, response) {
-   // Render index.liquid uit de Views map
-   // Geef hier eventueel data aan mee
-   response.render('index.liquid')
-})
+app.get('/', async function (req, res) {
+
+  const stories = await getStories();
+  const categories = await getCategories();
+
+  const algemeenStory = stories.find(function(story) {
+    return story.id === 44;
+  });
+
+  res.render('index.liquid', { 
+    story: algemeenStory,
+    categories: categories
+  });
+
+});
 
 app.get('/nieuw-west', async function (req, res) {
 
@@ -94,7 +104,8 @@ app.get('/details/:id', async function (req, res) {
 
   res.render('details.liquid', { 
     story: story,
-    categories: categories
+    categories: categories,
+    showBack: true
   });
 
 });

@@ -1,0 +1,24 @@
+<article class="article">
+
+        {% if showBack %}
+        <a href="javascript:history.back()" class="back-link">
+            ← Terug
+        </a>
+        {% endif %}
+        
+        <p class="label-district">{{ story.district }}</p>
+
+        {% for category in categories %}
+            {% if category.id == story.categories[0] %}
+                <p>{{ category.title }}</p>
+            {% endif %}
+        {% endfor %}
+
+        <h1>{{ story.title }}</h1>
+
+        <p>{{ story.intro }}</p>
+
+        {{ story.body }}
+
+
+    </article>
