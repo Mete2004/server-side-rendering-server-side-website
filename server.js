@@ -58,9 +58,13 @@ app.get('/', async function (req, res) {
   const stories = await getStories();
   const categories = await getCategories();
 
-  const algemeenStory = stories.find(function(story) {
-    return story.id === 44;
-  });
+  const algemeenStory = stories
+    .filter(function(story) {
+      return story.date !== null;
+    })
+    .sort(function(a, b) {
+      return new Date(b.date) - new Date(a.date);
+    })[0];
 
   res.render('index.liquid', { 
     story: algemeenStory,
