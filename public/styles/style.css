@@ -2,6 +2,9 @@
   /* color */
   --bg-main: #F5F7FA;
   --orange: #f6601a;
+  --main-dark-blue: #314366;
+  --main-orange: #E4822D;
+  --main-light-blue: #2F7789;
 
   /* text */
   --text-s: 14px;
@@ -17,10 +20,9 @@
 
 body{
   background: black;
-  padding: 0.8rem;
+  padding: 0.2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 /* header */
 
@@ -40,22 +42,47 @@ header{
   height: auto;
 }
 
-/* MENU */
+.outer-search{
+  place-content: center;
+  width: 7rem;
+  input{
+    width: 95%;
+  }
+}
 
 .menu-button-outer{
   place-content: center;
 }
 
 .menu-button{
-  width: 6rem;
-  height: 2rem;
-  background: var(--orange);
-  text-align: center;
-  place-content: center;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
   border-radius: 0.8rem;
   @media (min-width: 768px) {
     display: none;
   }
+}
+
+.menu-button span{
+  width: 24px;
+  height: 3px;
+  background: rgb(149, 149, 149);
+}
+
+.nieuw-west .menu-button span{
+  background: var(--main-dark-blue);
+}
+
+.zuidoost .menu-button span{
+  background: var(--main-light-blue);
+}
+
+.oost .menu-button span{
+  background: var(--main-orange);
 }
 
 .mobile-nav {
@@ -135,31 +162,36 @@ header{
   gap: 1.5rem;
 }
 
-.card {
+.card-big {
   border: 1px solid #ddd;
   padding: 1rem;
   border-radius: 8px;
   background: #fff;
   border: 2px solid var(--orange);
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+  }
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
+.card-medium{
+  img{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
 }
 
-.card h2 {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-}
-
-.card p {
-  margin: 0.25rem 0;
-  font-size: 0.9rem;
-}
-
-.card-button {
+.card-big-button {
   display: inline-block;
   margin-top: 0.8rem;
   padding: 0.5rem 0.8rem;

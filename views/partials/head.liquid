@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/styleguide.css">
 </head>
-<body> 
+<body class="{{ pageClass }}"> 
     <header>
 
         {% render "partials/logo.liquid", 
             mobile_logo: mobile_logo, 
             desktop_logo: desktop_logo 
         %}
+
+        <div class="outer-search">
+            <input type="text" name="search" placeholder="Zoek..." aria-label="Zoek">
+        </div>
         
         <div class="menu-button-outer">
             <div class="menu-button" id="menu">
-                <p>Menu</p>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
 
