@@ -2,6 +2,7 @@
     {% assign desktop_logo = "/assets/logo-lang-home.svg" %}
     
     {% render 'partials/head.liquid',
+        pageClass: "home",
         mobile_logo: mobile_logo,
         desktop_logo: desktop_logo
     %}
@@ -9,7 +10,7 @@
     <main class="main-home">
         <section class="section-home">
             <div class="card-algemeen">
-                {% render 'partials/detail-content.liquid', story: story, categories: categories %}
+                {% render 'partials/card-big.liquid', story: story, categories: categories %}
             </div>
         </section>
     </main>

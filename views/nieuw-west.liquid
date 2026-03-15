@@ -2,6 +2,7 @@
     {% assign desktop_logo = "/assets/logo-lang-nieuw-west.svg" %}
 
     {% render 'partials/head.liquid',
+        pageClass: "nieuw-west",
         mobile_logo: mobile_logo,
         desktop_logo: desktop_logo
     %}
@@ -11,7 +12,7 @@
         <section class="section-cards">
             <div class="cards">
                 {% for story in stories %}
-                    {% render 'partials/card.liquid', story: story, categories: categories %}
+                    {% render 'partials/card-big.liquid', story: story, categories: categories %}
                 {% endfor %}
             </div>
         </section>
