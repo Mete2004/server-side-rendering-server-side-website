@@ -171,7 +171,7 @@ header{
   flex-direction: column;
   gap: 0.3rem;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 15px;
   background: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -193,7 +193,7 @@ header{
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0 0.8rem 0.5rem 0.8rem;
+  padding: 0 0.8rem 0 0.8rem;
   h3{
     font-size: var(--intro-text);
     font-weight: var(--intro-weight);
@@ -204,6 +204,7 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0 0 0.3rem 0.8rem ;
   color: rgb(79, 79, 79);
   a{
     color: rgb(79, 79, 79);
@@ -227,6 +228,10 @@ header{
   text-decoration: none;
   border-radius: 4px;
   font-weight: var(--font-weight-light);
+}
+
+.card-big-button:hover{
+  background-color: rgb(233, 233, 233);
 }
 
 .label-district{
