@@ -17,9 +17,9 @@ header{
     background: var(--bg-main);
     padding: 1rem;
     position: relative;
-    border-radius: 1rem;
-    border: 2px solid var(--orange);
+    border-radius: 0.2rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgb(181, 181, 181);
 }
 
 .logo img{
@@ -177,13 +177,20 @@ header{
 .card-big-badge{
   width: 7rem;
   height: 2rem;
-  background: var(--main-orange);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
   border-radius: 1.5rem;
   place-content: center;
   text-align: center;
   position: absolute;
-  top: 11.5rem;
-  left: 0.5rem;
+  top: 11.25rem;
+  left: 0.75rem;
+  font-weight: var(--font-weight-light);
+  font-size: var(--text-s);
+  font-style: italic;
+  border: 1px solid orange;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .card-big-content{
@@ -202,9 +209,9 @@ header{
   flex-direction: row;
   justify-content: space-between;
   padding: 0 0 0.3rem 0.8rem ;
-  color: rgb(79, 79, 79);
+  color: rgb(67, 67, 67);
   a{
-    color: rgb(79, 79, 79);
+    color: rgb(49, 49, 49);
   }
 }
 
@@ -228,14 +235,14 @@ header{
 }
 
 .card-big-button:hover{
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(255, 255, 255);
 }
 
 .label-district{
   display: inline-block;
   width: 6rem;
   height: 2rem;
-  background-color: #d4d6db;
+  background-color: #e1e1e1;
   text-align: center;
   place-content: center;
   border-radius: 1rem;
