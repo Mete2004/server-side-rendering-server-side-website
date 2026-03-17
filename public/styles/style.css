@@ -18,13 +18,16 @@ header{
     padding: 1rem;
     position: relative;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    border-bottom: 1px solid rgb(195, 195, 195);
+    border-bottom: 2px solid rgb(195, 195, 195);
     place-items: center;
 }
 
 .logo img{
-  width: 10rem;
+  width: 8rem;
   height: auto;
+  @media (min-width: 768px) {
+    width: 15rem;
+  }
 }
 
 .outer-search{
@@ -42,6 +45,9 @@ header{
   border-radius: 0.5rem;
   height: 2.3rem;
   width: 2.3rem;
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-button{
@@ -85,6 +91,18 @@ header{
 
 .oost .menu-button span{
   background: var(--main-orange);
+}
+
+.nieuw-west header{
+  border-bottom: 3px solid var(--main-dark-blue);
+}
+
+.zuidoost header{
+  border-bottom: 3px solid var(--main-light-blue);
+}
+
+.oost header{
+  border-bottom: 3px solid var(--main-orange);
 }
 
 .mobile-nav {
@@ -174,21 +192,13 @@ header{
   border: 1px solid #ccc;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   overflow: hidden;
-  img {
-    width: 100%;
-    height: auto;
-  }
-  h2 {
-    font-size: 1.3rem;
-  }
-  p {
-    margin: 0.25rem 0;
-    font-size: 0.9rem;
-  }
 }
 
 .card-big-outer-img{
   position: relative;
+  img {
+    width: 100%;
+  }
 }
 
 .card-big-badge{
@@ -216,8 +226,15 @@ header{
   gap: 0.5rem;
   padding: 0 0.8rem 0 0.8rem;
   h3{
-    font-size: var(--intro-text);
+    font-size: var(--intro-big-text);
     font-weight: var(--intro-weight);
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
   }
 }
 
@@ -226,7 +243,7 @@ header{
   flex-direction: row;
   justify-content: space-between;
   padding: 0 0 0.3rem 0.8rem ;
-  color: rgb(67, 67, 67);
+  color: rgb(45, 45, 45);
   a{
     color: rgb(49, 49, 49);
   }
@@ -266,20 +283,65 @@ header{
   color: rgb(62, 62, 62);
 }
 
+
+
+/* card-medium.liquid */
+
 .card-medium{
-  img{
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+  background: var(--bg-main);
+  overflow: hidden;
+}
+
+.card-medium-outer-img{
+   img{
+    width: 8rem;
+    height: 7rem;
+    border-radius: 0.5rem;
   }
 }
 
+.card-medium-content{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0 0.5rem 0.4rem;
+  h3{
+    font-size: var(--intro-medium-text);
+    font-weight: var(--intro-weight);
+  }
+  h2 {
+    font-size: var(--titel-medium);
+  }
+  p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+}
+
+.cards-medium{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-medium-meta{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 
 /* nieuw-west.liquid */
 
 .main-nieuw-west {
-  padding: 0 1rem;
+  padding: 0 0.5rem;
+  background: var(--bg-main);
 }
 
 .page-title {

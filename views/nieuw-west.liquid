@@ -10,9 +10,9 @@
     <main class="main-nieuw-west">
 
         <section class="section-cards">
-            <div class="cards">
+            <div class="cards-medium">
                 {% for story in stories %}
-                    {% render 'partials/card-big.liquid', story: story, categories: categories %}
+                    {% render 'partials/card-medium.liquid', story: story, categories: categories %}
                 {% endfor %}
             </div>
         </section>

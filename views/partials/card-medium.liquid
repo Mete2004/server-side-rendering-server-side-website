@@ -1,19 +1,22 @@
 <div class="card-medium">
 
-    <img src="https://fdnd-agency.directus.app/assets/{{ story.cover }}" alt="{{ story.title }}">
+    <div class="card-medium-outer-img">
+        <img src="https://fdnd-agency.directus.app/assets/{{ story.cover }}" alt="{{ story.title }}">
+    </div>
+    
+    <div class="card-medium-content">
+        <h2>{{ story.title }}</h2>
 
-    <h2>{{ story.title }}</h2>
+        <h3>{{ story.intro }}</h3>
 
-    <p>{{ story.district }}</p>
+        {% comment %} <p>{{ story.district }}</p> {% endcomment %}
 
-    {% for category in categories %}
-        {% if category.id == story.categories[0] %}
-            <p>{{ category.title }}</p>
-        {% endif %}
-    {% endfor %}
-
-    <a href="/details/{{ story.id }}" class="card-medium-button">
-        Lees meer
-    </a>
-
+        <div class="card-medium-meta">
+            <p class="card-date">{{ story.date }}</p>
+            
+            <a href="/details/{{ story.id }}" class="card-medium-button">
+                Lees meer
+            </a>
+        </div>
+    </div>
 </div>

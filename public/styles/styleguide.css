@@ -1,6 +1,6 @@
 :root {
   /* color */
-  --bg-main: #F5F7FA;
+  --bg-main: white;
   --orange: #f6601a;
   --main-dark-blue: #314366;
   --main-orange: #E4822D;
@@ -12,7 +12,17 @@
   --text-l: 20px;
   --text-xl: 28px;
 
-  --intro-text: 0.8rem;
+  /* card */
+
+  /* titel */
+  --titel-big: 1.3rem;
+  --titel-medium: 1.1rem;
+
+  /* intro */
+  --intro-big-text: 0.85rem;
+  --intro-medium-text: 0.65rem;
+  --intro-small-text: 0.85rem;
+
   --intro-weight: 400;
 
   /* font-weight */
