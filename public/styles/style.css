@@ -17,9 +17,8 @@ header{
     background: var(--bg-main);
     padding: 1rem;
     position: relative;
-    border-radius: 0.2rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    border-bottom: 1px solid rgb(181, 181, 181);
+    border-bottom: 1px solid rgb(195, 195, 195);
     place-items: center;
 }
 
