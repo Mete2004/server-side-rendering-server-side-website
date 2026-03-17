@@ -20,6 +20,7 @@ header{
     border-radius: 0.2rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border-bottom: 1px solid rgb(181, 181, 181);
+    place-items: center;
 }
 
 .logo img{
@@ -37,6 +38,11 @@ header{
 
 .menu-button-outer{
   place-content: center;
+  place-items: center;
+  border: 2px solid rgb(137, 137, 137);
+  border-radius: 0.5rem;
+  height: 2.3rem;
+  width: 2.3rem;
 }
 
 .menu-button{
@@ -56,6 +62,18 @@ header{
   width: 24px;
   height: 3px;
   background: rgb(149, 149, 149);
+}
+
+.nieuw-west .menu-button-outer{
+   border: 2px solid var(--main-dark-blue);
+}
+
+.zuidoost .menu-button-outer{
+   border: 2px solid var(--main-light-blue);
+}
+
+.oost .menu-button-outer{
+   border: 2px solid var(--main-orange);
 }
 
 .nieuw-west .menu-button span{
